@@ -13,6 +13,7 @@ Flask==3.0.3
 Flask-Scheduler==0.0.51
 fonttools==4.53.1
 frozendict==2.4.4
+gunicorn==23.0.0
 html5lib==1.1
 idna==3.7
 itsdangerous==2.2.0
