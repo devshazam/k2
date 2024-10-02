@@ -12,7 +12,7 @@ scheduler = Scheduler(app)
 # scheduler config interval
 app.config['SCHEDULER_API_INTERVAL'] = 600 # in seconds
 
-@scheduler.runner(interval=10)
+@scheduler.runner(interval=7200)
 def my_task():
     print('tick')
     f = open("static/result.txt", "a", encoding="utf-8")
