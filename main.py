@@ -17,7 +17,7 @@ def my_task():
     print('tick')
     f = open("static/result.txt", "a", encoding="utf-8")
 
-    string_to_write = '\n' + datetime.datetime.now().strftime("%c") + " | Close:" + indicator.getData()
+    string_to_write = '\n' + datetime.datetime.now().strftime("%c") + " | " + indicator.getData()
     f.write(string_to_write)
     f.close()
 

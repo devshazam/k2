@@ -14,7 +14,7 @@ warnings.filterwarnings("ignore", message="numpy.ufunc size changed")
 # CONFIG:
 # period = “1d”, “5d”, “1mo”, “3mo”, “6mo”, “1y”, “2y”, “5y”, “10y”, “ytd”, “max”
 # interval = 1m, 2m, 5m, 15m, 30m, 60m, 90m, 1h, 1d, 5d, 1wk, 1mo, 3mo
-btc= yf.Ticker("BTC-USD")
+btc= yf.Ticker("SOL-USD")
 
 def getData():
     btc_usd_90Days = btc.history(period="3mo", interval="1d")
@@ -33,10 +33,9 @@ def getData():
     x9 = bollinger_bands(btc_usd_30Days_Copy)
     x10 = x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9
 
-    # print(type(x5), type(str(x5)), type(x6), type(str(x6)), type(x7), type(str(x7)), type(x8), type(str(x8)), type(x9), type(str(x9))) 
+    # print(" №1=" + str(x1) + ' | №2=' + str(x2) + " | №3=" + str(x3) + " | №4=" + str(x4) + " | №5=" + str(x5) + " | №6=" + str(x6) + " | №7=" + str(x7) + " | №8=" + str(x8) + " | №9=" + str(x9) + ' | Summ: ' + str(x10) + ' | Close: ' + str(btc_usd_90Days['Close'].iloc[-1]))
 
-
-    return " " + str(btc_usd_90Days['Close'].iloc[-1]) + ": №1=" + str(x1) + ' | №2=' + str(x2) + " | №3=" + str(x3) + " | №4=" + str(x4) + " | №5=" + str(x5) + " | №6=" + str(x6) + " | №7=" + str(x7) + " | №8=" + str(x8) + " | №9=" + str(x9) + ' | Summ: ' + str(x10)
+    return " №1=" + str(x1) + ' | №2=' + str(x2) + " | №3=" + str(x3) + " | №4=" + str(x4) + " | №5=" + str(x5) + " | №6=" + str(x6) + " | №7=" + str(x7) + " | №8=" + str(x8) + " | №9=" + str(x9) + ' | Summ: ' + str(x10) + ' | Close: ' + str(btc_usd_90Days['Close'].iloc[-1])
 
 
 
@@ -205,3 +204,4 @@ def bollinger_bands(btc_usd_30Days_Copy):
 # bollinger_bands()
 # sarimax()
 # prophet()
+# getData()
